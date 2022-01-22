@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main-header">
+            <h1>Tic Tac Toe</h1>
+        </div>
+        <div id="main-content">
+            <div id="board">
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+                <div class="item empty"></div>
+            </div>
+        </div>
+        <div id="main-footer">Tic Tac Toe by Walter Gastón Valé</div>
+        <div id="winner-modal-container">
+            <div id="winner-modal">
+                <h1>Player 1 Wins</h1>
+                <button onclick="game.restart()">Restart</button>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

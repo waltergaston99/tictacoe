@@ -1,0 +1,109 @@
+:root{
+    --background-color:rgb(235, 235, 235);
+    --background-color-darker:rgb(200,200,200);
+    --background-color-darker-hover:rgb(225,225,225);
+    --letter-color: rgb(51, 51, 51);
+    --board-size: 50vmin;
+}
+body{
+    margin: 0;
+    background-color:var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#main-header h1{
+    font-family: "Roboto";
+    font-size: 4rem;
+    letter-spacing: 0.20em;
+    color:var(--letter-color);
+    text-align: center;
+    margin:0.25em;
+    font-weight: 900;
+}
+#main-content{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-footer{
+    font-family: "Roboto";
+    font-weight: 900;
+    text-align: center;
+    margin:0.2em;
+}
+#board{
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--board-size);
+    height: var(--board-size);
+    row-gap: 0;
+    justify-content: center;
+    align-content: flex-start;
+    
+}
+.item{
+    display: flex;
+    color: var(--letter-color);
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 500%;
+    width: 32%;
+    height: 32%;
+    justify-content: center;
+    align-items: center;
+    border:1px solid var(--background-color-darker);
+}
+.empty{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.empty:hover{
+    
+    background-color: var(--background-color-darker);
+}
+#winner-modal-container{
+    display: none;
+    position: absolute;
+    top:0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+#winner-modal{
+    display: flex;
+    background-color: white;
+    padding: 2em 5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3em;
+    
+}
+#winner-modal h1{
+    font-family: "Roboto";
+    font-weight: 900;
+
+}
+#winner-modal button{
+    font-family: "Roboto";
+    background-color: var(--background-color-darker);
+    font-weight: 900;
+    font-size:1rem;
+    color:var(--letter-color);
+    border:none;
+    border-radius: 2em;
+    padding:0.5em 2em;
+    transition:all 0.3s;
+    cursor: pointer;
+}
+#winner-modal button:hover{
+    background-color: var(--background-color-darker-hover);
+    transform:scale(1.2);
+    box-shadow:2px 5px 10px #888;
+}
